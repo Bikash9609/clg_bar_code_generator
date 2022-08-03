@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= keyword %> Bar Code - Generate Bar Code</title>
+    <%- include('header'); -%>
+  </head>
+  <body>
+    <div class="container" style="min-height: 95vh">
+      <div
+        class="d-flex p-2 justify-content-center aling-center-items"
+        style="background: #eee"
+      >
+        <h1>Generate Bar Code</h1>
+      </div>
+
+      <div class="container-sm">
+        <div class="row p-2 mt-5">
+          <div class="col-2"></div>
+          <div class="col">
+            <img
+              src="<%= canvas %>"
+              class="img-thumbnail mx-auto d-block"
+              alt="Bar code"
+            />
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <div class="d-flex p-2 justify-content-center aling-center-items">
+          <form method="get" action="/">
+            <input
+              aria-errormessage="Bar code text is required"
+              required
+              value="<%= inputVal %>"
+              class="input p-2 px-4 mx-2"
+              placeholder="Hello"
+              name="keyword"
+            />
+            <button type="submit" class="btn btn-success p-2">Generate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      style="
+        background-color: #000;
+        width: 100%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+      "
+    >
+      Created by Bikash Tiwari
+    </footer>
+
+    <%- include('footer'); -%>
+  </body>
+</html>
